@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>{{ name }}</title>
+<head>
+<body>
+	<table cellspacing="0" style="width:500px; border:0; font-size: 14px;">
+		{% for item in items %}
+			<tr>
+				<td>{{ item.column_1 }}</td>
+				<td>{{ item.column_2 }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

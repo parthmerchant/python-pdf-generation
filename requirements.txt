@@ -1,3 +1,2 @@
-pandas
-Jinja
-xhtml2pdf
+Jinja2
+pdfkit
