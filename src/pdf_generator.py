@@ -1,5 +1,6 @@
 import jinja2
 import pdfkit
+import os 
 
 items = [
     {
@@ -34,6 +35,7 @@ def render_html():
     print("Now converting to pdf")
     pdf_path = "./Parth.pdf"    
     html2pdf(html_path, pdf_path)   
+    os.remove("./name.html")
 
 def html2pdf(html_path, pdf_path):
     """
