@@ -1,2 +1,2 @@
 # python-pdf-generation
-This is a simple PDF generator framework using Python, Jinja, Pandas and xhtml2pdf
+This is a simple PDF generator framework using Python, Jinja2 and pdfkit.
