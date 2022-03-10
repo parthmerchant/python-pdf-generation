@@ -1,2 +1,5 @@
 Jinja2
-pdfkit
+weasyprint
+fastapi
+starlette
+uvicorn
