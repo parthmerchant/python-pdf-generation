@@ -1,2 +1,2 @@
 # python-pdf-generation
-This is a simple PDF generator framework using Python, Jinja2 and pdfkit.
+This is a simple PDF generation and download framework using Python, Jinja2, weasyprint with FastAPI app.
