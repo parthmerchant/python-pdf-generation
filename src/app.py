@@ -1,34 +1,18 @@
-from typing import List
-from fastapi import FastAPI
-from starlette.responses import StreamingResponse
-from weasyprint import HTML
-from jinja2 import Environment, FileSystemLoader
 import io
 
+from fastapi import FastAPI
+from starlette.responses import StreamingResponse
 
-def generate_template(filename):
-    env = Environment(loader=FileSystemLoader("."))
-    template = env.get_template(filename)
-    return template
-
-
-items = [{"column_1": "Hello", "column_2": "World"}, {"column_1": "Hello", "column_2": "World"}]
-
-name = "Parth"
-
-template = generate_template("pdf_template.html")
-
-html_out = template.render(name=name, items=items)
-
-html_byte_array = HTML(string=html_out).write_pdf()
+from pdf import generate_pdf
 
 app = FastAPI()
 
 
 @app.get("/")
 async def get_pdf():
+    pdf_bytes = generate_pdf('pdf_template.html')
     return StreamingResponse(
-        io.BytesIO(html_byte_array),
+        io.BytesIO(pdf_bytes),
         media_type="application/pdf",
         headers={"Content-Disposition": "attachment;filename=export.pdf"},
     )

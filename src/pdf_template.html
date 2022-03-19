@@ -1,15 +1,33 @@
 <html>
+
 <head>
 	<title>{{ name }}</title>
-<head>
-<body>
-	<table cellspacing="0" style="width:500px; border:0; font-size: 14px;">
-		{% for item in items %}
+
+	<head>
+
+	<body>
+		<table cellspacing="0" class="first-page" style="width:500px; border:0; font-size: 14px;">
+			<thead>
+				<tr>
+					<td>Column1</td>
+					<td>Column2</td>
+				</tr>
+			</thead>
+			{% for item in items %}
 			<tr>
 				<td>{{ item.column_1 }}</td>
 				<td>{{ item.column_2 }}</td>
 			</tr>
-		{% endfor %}
-	</table>
-</body>
+			{% endfor %}
+		</table>
+		<table cellspacing="0" class="second-page" style="width:500px; border:0; font-size: 14px;">
+			{% for item in items %}
+			<tr>
+				<td>{{ item.column_1 }}</td>
+				<td>{{ item.column_2 }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+
 </html>
