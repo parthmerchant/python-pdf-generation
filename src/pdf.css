@@ -1,0 +1,19 @@
+@page {
+    @bottom-right{
+        content: "Page " counter(page) " of " counter(pages);
+    }
+}
+
+@page:first {
+    @bottom-center{
+        content: "Hello!!!";
+    }
+}
+
+.first-page {
+    height: 1000px;
+}
+
+.second-page {
+    height: 1000px;
+}
