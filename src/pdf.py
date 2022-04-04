@@ -11,6 +11,7 @@ items = [
     {"column_1": "Hello", "column_2": "World"},
 ]
 
+# Const name
 name = 'Parth'
 
 def _generate_template(filename):
